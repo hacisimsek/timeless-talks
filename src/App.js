@@ -5,7 +5,7 @@ import { Input } from "./components/ui/input";
 import { User, Send } from "lucide-react";
 
 const App = () => {
-  const [step, setStep] = useState("register"); // 'register' or 'chat'
+  const [step, setStep] = useState("register");
   const [formData, setFormData] = useState({
     name: "",
     age: "",
@@ -141,7 +141,7 @@ const App = () => {
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
           <User className="w-6 h-6" />
-          {formData.gender === "male" ? "Bayan" : "Bay"} ile sohbet
+          {formData.gender === "male" ? "Bayan" : "Bay"}
         </CardTitle>
       </CardHeader>
       <CardContent className="flex-1 overflow-y-auto flex flex-col">
