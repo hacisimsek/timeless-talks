@@ -41,16 +41,16 @@ const App = () => {
   const getBotResponse = (message, botGender) => {
     const responses = {
       male: [
-        "Merhaba, profiliniz çok etkileyici görünüyor!",
-        "İlgi alanlarınız gerçekten ilginç. Daha fazla bahseder misiniz?",
-        "Boş zamanlarınızda neler yapmaktan hoşlanırsınız?",
-        "Harika bir sohbet oldu, başka neler paylaşmak istersiniz?",
+        "Hi, your profile looks very impressive!",
+        "Your interests are really interesting. Can you tell us more about them?",
+        "What do you like to do in your free time?",
+        "This has been a great conversation, what else would you like to share?",
       ],
       female: [
-        "Profilinizi inceledim, çok hoş görünüyor!",
-        "Paylaştığınız ilgi alanları dikkatimi çekti. Biraz daha anlatır mısınız?",
-        "Hafta sonları genelde neler yaparsınız?",
-        "Bu konuşma çok keyifli, devam edelim mi?",
+        "I checked out your profile, it looks very nice!",
+        "I noticed the interests you share. Can you tell me more about them?",
+        "What do you usually do on weekends?",
+        "This conversation is very enjoyable, shall we continue?",
       ],
     };
 
@@ -64,14 +64,14 @@ const App = () => {
       <Card className="w-full max-w-md mx-auto mt-10">
         <CardHeader>
           <CardTitle className="text-center">
-            Flört Uygulamasına Hoş Geldiniz
+            Welcome to the Dating App
           </CardTitle>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleFormSubmit} className="space-y-4">
             <div>
               <Input
-                placeholder="Adınız"
+                placeholder="Your Name"
                 value={formData.name}
                 onChange={(e) =>
                   setFormData({ ...formData, name: e.target.value })
@@ -83,7 +83,7 @@ const App = () => {
             <div>
               <Input
                 type="number"
-                placeholder="Yaşınız"
+                placeholder="Your age"
                 value={formData.age}
                 onChange={(e) =>
                   setFormData({ ...formData, age: e.target.value })
@@ -101,14 +101,14 @@ const App = () => {
                 }
                 required
               >
-                <option value="">Cinsiyet Seçin</option>
-                <option value="male">Erkek</option>
-                <option value="female">Kadın</option>
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
               </select>
             </div>
             <div>
               <Input
-                placeholder="İlgi Alanlarınız"
+                placeholder="Fields of Interest"
                 value={formData.interests}
                 onChange={(e) =>
                   setFormData({ ...formData, interests: e.target.value })
@@ -128,7 +128,7 @@ const App = () => {
               />
             </div>
             <Button type="submit" className="w-full">
-              Sohbete Başla
+              Start Chat
             </Button>
           </form>
         </CardContent>
@@ -169,7 +169,7 @@ const App = () => {
           <Input
             value={newMessage}
             onChange={(e) => setNewMessage(e.target.value)}
-            placeholder="Mesajınızı yazın..."
+            placeholder="Write your message..."
             className="flex-1"
           />
           <Button type="submit">
