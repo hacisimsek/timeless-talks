@@ -16,6 +16,10 @@ const App = () => {
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState("");
 
+  const handleInputChange = (field, value) => {
+    setFormData((prevData) => ({ ...prevData, [field]: value }));
+  };
+
   const handleFormSubmit = (e) => {
     e.preventDefault();
     setStep("chat");
@@ -26,14 +30,10 @@ const App = () => {
     if (!newMessage.trim()) return;
 
     const botGender = formData.gender === "male" ? "female" : "male";
-
-    setMessages([
-      ...messages,
+    setMessages((prevMessages) => [
+      ...prevMessages,
       { text: newMessage, sender: "user" },
-      {
-        text: getBotResponse(newMessage, botGender),
-        sender: "bot",
-      },
+      { text: getBotResponse(newMessage, botGender), sender: "bot" },
     ]);
     setNewMessage("");
   };
@@ -53,90 +53,61 @@ const App = () => {
         "This conversation is very enjoyable, shall we continue?",
       ],
     };
-
-    return responses[botGender][
-      Math.floor(Math.random() * responses[botGender].length)
-    ];
+    return responses[botGender][Math.floor(Math.random() * responses[botGender].length)];
   };
 
-  if (step === "register") {
-    return (
-      <Card className="w-full max-w-md mx-auto mt-10">
-        <CardHeader>
-          <CardTitle className="text-center">
-            Welcome to the Dating App
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <form onSubmit={handleFormSubmit} className="space-y-4">
-            <div>
-              <Input
-                placeholder="Your Name"
-                value={formData.name}
-                onChange={(e) =>
-                  setFormData({ ...formData, name: e.target.value })
-                }
-                required
-                className="w-full"
-              />
-            </div>
-            <div>
-              <Input
-                type="number"
-                placeholder="Your age"
-                value={formData.age}
-                onChange={(e) =>
-                  setFormData({ ...formData, age: e.target.value })
-                }
-                required
-                className="w-full"
-              />
-            </div>
-            <div>
-              <select
-                className="w-full p-2 border rounded-md"
-                value={formData.gender}
-                onChange={(e) =>
-                  setFormData({ ...formData, gender: e.target.value })
-                }
-                required
-              >
-                <option value="">Select Gender</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-              </select>
-            </div>
-            <div>
-              <Input
-                placeholder="Fields of Interest"
-                value={formData.interests}
-                onChange={(e) =>
-                  setFormData({ ...formData, interests: e.target.value })
-                }
-                required
-                className="w-full"
-              />
-            </div>
-            <div>
-              <Input
-                type="file"
-                accept="image/*"
-                onChange={(e) =>
-                  setFormData({ ...formData, photo: e.target.files[0] })
-                }
-                className="w-full"
-              />
-            </div>
-            <Button type="submit" className="w-full">
-              Start Chat
-            </Button>
-          </form>
-        </CardContent>
-      </Card>
-    );
-  }
+  const renderRegisterForm = () => (
+    <Card className="w-full max-w-md mx-auto mt-10">
+      <CardHeader>
+        <CardTitle className="text-center">Welcome to the Dating App</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <form onSubmit={handleFormSubmit} className="space-y-4">
+          <Input
+            placeholder="Your Name"
+            value={formData.name}
+            onChange={(e) => handleInputChange("name", e.target.value)}
+            required
+            className="w-full"
+          />
+          <Input
+            type="number"
+            placeholder="Your age"
+            value={formData.age}
+            onChange={(e) => handleInputChange("age", e.target.value)}
+            required
+            className="w-full"
+          />
+          <select
+            className="w-full p-2 border rounded-md"
+            value={formData.gender}
+            onChange={(e) => handleInputChange("gender", e.target.value)}
+            required
+          >
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+          <Input
+            placeholder="Fields of Interest"
+            value={formData.interests}
+            onChange={(e) => handleInputChange("interests", e.target.value)}
+            required
+            className="w-full"
+          />
+          <Input
+            type="file"
+            accept="image/*"
+            onChange={(e) => handleInputChange("photo", e.target.files[0])}
+            className="w-full"
+          />
+          <Button type="submit" className="w-full">Start Chat</Button>
+        </form>
+      </CardContent>
+    </Card>
+  );
 
-  return (
+  const renderChat = () => (
     <Card className="w-full max-w-md mx-auto mt-10 h-[600px] flex flex-col">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
@@ -149,15 +120,11 @@ const App = () => {
           {messages.map((message, index) => (
             <div
               key={index}
-              className={`flex ${
-                message.sender === "user" ? "justify-end" : "justify-start"
-              }`}
+              className={`flex ${message.sender === "user" ? "justify-end" : "justify-start"}`}
             >
               <div
                 className={`max-w-[70%] rounded-lg p-3 ${
-                  message.sender === "user"
-                    ? "bg-blue-500 text-white"
-                    : "bg-gray-100"
+                  message.sender === "user" ? "bg-blue-500 text-white" : "bg-gray-100"
                 }`}
               >
                 {message.text}
@@ -179,6 +146,8 @@ const App = () => {
       </CardContent>
     </Card>
   );
+
+  return step === "register" ? renderRegisterForm() : renderChat();
 };
 
 export default App;
