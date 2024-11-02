@@ -79,5 +79,4 @@ export const historicalFigures = [
         tone: "wise and regal",
         areasOfInfluence: "leadership, diplomacy, arts patronage",
     },
-    // Listenin geri kalanını benzer yapıda devam ettirebilirsiniz
 ];
