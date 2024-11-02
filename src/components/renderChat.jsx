@@ -4,6 +4,7 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { User, Send, Loader } from "lucide-react";
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import { historicalFigures } from "../constants";
 
 const apiKey = process.env.REACT_APP_GOOGLE_API_KEY;
 console.log("API Key:", apiKey);
@@ -14,15 +15,20 @@ const RenderChat = ({ userProfile, onBack }) => {
   const [newMessage, setNewMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
+  const figureProfile = historicalFigures.find(figure => figure.name === userProfile.figure);
+
+  const generateHistoricalFigurePrompt = (figureProfile, userProfile) => {
+    return `You are ${figureProfile.name}, a ${figureProfile.title} known for ${figureProfile.achievements}.
+    You are speaking to: ${userProfile.name}, who is ${userProfile.age} years old.
+    Your tone is ${figureProfile.tone}, wise, inspirational, and reflective.
+    Share your knowledge, historical perspective, and vision.
+    Engage in a way that educates, inspires, and draws upon your experiences in ${figureProfile.areasOfInfluence}.
+    Make sure to address ${userProfile.name}'s curiosity and respond in a way that aligns with their interests and knowledge level.`;
+  };
+
   const generateSystemPrompt = (userProfile) => {
-    const oppositeGender = userProfile.gender === "male" ? "female" : "male";
-    return `You are a ${oppositeGender} chat bot.
-    Chatting with: ${userProfile.name},
-    Age: ${userProfile.age},
-    Interests: ${userProfile.interests}.
-    Speak in English, be flirtatious, kind, and attentive.
-    Keep your responses short and friendly.
-    Engage in conversation based on their interests.`;
+    const prompt = generateHistoricalFigurePrompt(figureProfile, userProfile);
+    return prompt;
   };
 
   const generateAIResponse = async (userMessage) => {
@@ -65,12 +71,12 @@ const RenderChat = ({ userProfile, onBack }) => {
 
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
-      <Card className="w-full max-w-md h-[600px] flex flex-col">
+      <Card className="w-full  h-[990px]  flex flex-col">
         <CardHeader className="border-b">
           <CardTitle className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <User className="w-6 h-6" />
-              Your AI Chat Partner
+              <div>{figureProfile.name}</div>
             </div>
             <Button variant="outline" size="sm" onClick={onBack}>
               Go Back

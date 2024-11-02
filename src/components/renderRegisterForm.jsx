@@ -2,14 +2,13 @@ import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
+import { historicalFigures } from "../constants";
 
 const RegisterFormComponent = ({ onSubmit }) => {
   const [formData, setFormData] = useState({
     name: '',
     age: '',
-    gender: '',
-    interests: '',
-    photo: ''
+    figure: ''
   });
 
   const handleSubmit = (e) => {
@@ -48,30 +47,14 @@ const RegisterFormComponent = ({ onSubmit }) => {
               <select
                 className="w-full p-2 border rounded-md"
                 value={formData.gender}
-                onChange={(e) => setFormData({ ...formData, gender: e.target.value })}
+                onChange={(e) => setFormData({ ...formData, figure: e.target.value })}
                 required
               >
-                <option value="">Select Gender</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
+                <option value="">Select Figure</option>
+                {historicalFigures.map((figure) => (
+                  <option key={figure.name} value={figure.name}>{figure.name}</option>
+                ))}
               </select>
-            </div>
-            <div>
-              <Input
-                placeholder="Your Interests"
-                value={formData.interests}
-                onChange={(e) => setFormData({ ...formData, interests: e.target.value })}
-                required
-                className="w-full"
-              />
-            </div>
-            <div>
-              <Input
-                type="file"
-                accept="image/*"
-                onChange={(e) => setFormData({ ...formData, photo: e.target.files[0] })}
-                className="w-full"
-              />
             </div>
             <Button type="submit" className="w-full">
               Start Chatting
