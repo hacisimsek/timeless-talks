@@ -45,8 +45,9 @@ const RegisterFormComponent = ({ onSubmit }) => {
             </div>
             <div>
               <select
-                className="w-full p-2 border rounded-md"
-                value={formData.gender}
+                className="w-full p-2 border rounded-md overflow-y-auto"
+                style={{ maxHeight: '150px' }}
+                value={formData.figure}
                 onChange={(e) => setFormData({ ...formData, figure: e.target.value })}
                 required
               >
