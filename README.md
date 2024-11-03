@@ -9,6 +9,13 @@ An AI-powered chat application! Built using modern JavaScript technologies like 
   npm start
 ```
 
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
+`REACT_APP_GOOGLE_API_KEY`
+
+
 ## The Screenshot of Timeless Talk UI 
 ![Logo](public/images/loginscreen.png)
 
