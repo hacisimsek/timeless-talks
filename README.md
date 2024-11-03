@@ -10,5 +10,7 @@ An AI-powered chat application! Built using modern JavaScript technologies like 
 ```
 
 ## The Screenshot of Timeless Talk UI 
-![Logo](task-management-ui/src/app/images/Screenshot_task_management_app.png)
+![Logo](timeless-talks/public/images/loginscreen.png)
+
+![Logo](public/images/chatscreen.png)
 
