@@ -9,6 +9,34 @@ An AI-powered chat application! Built using modern JavaScript technologies like 
   npm start
 ```
 
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/hacisimsek/timeless-talks.git
+```
+
+Go to the project directory
+
+```bash
+  cd timeless-talks
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm start
+```
+
+
+
 ## Environment Variables
 
 To run this project, you will need to add the following environment variables to your .env file
