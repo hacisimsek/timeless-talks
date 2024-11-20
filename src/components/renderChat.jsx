@@ -51,6 +51,10 @@ const RenderChat = ({ userProfile, onBack }) => {
     }
   };
 
+  const generateProfilePhoto = (username) => {
+    return `https://api.dicebear.com/5.x/avataaars/svg?seed=${encodeURIComponent(username)}`;
+  };
+
   const handleSendMessage = async (e) => {
     e.preventDefault();
     if (!newMessage.trim()) return;
@@ -77,7 +81,12 @@ const RenderChat = ({ userProfile, onBack }) => {
         <CardHeader className="border-b">
           <CardTitle className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <User className="w-6 h-6" />
+              {/* <img className="w-6 h-6" alt="" s >
+
+              </img> */}
+
+              <img src={generateProfilePhoto(figureProfile.name || "defaultUser")} alt="" className="w-12 h-12 rounded-full"/>
+              
               <div>{figureProfile.name}</div>
             </div>
             <Button variant="outline" size="sm" onClick={onBack}>
