@@ -13,6 +13,12 @@ const RegisterFormComponent = ({ onSubmit }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (parseInt(formData.age, 10) < 18) {
+      alert("You must be 18 or older to use this application.");
+      return;
+    }
+
     onSubmit(formData);
   };
 
