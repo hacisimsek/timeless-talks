@@ -80,28 +80,36 @@ const RenderChat = ({ userProfile, onBack }) => {
 
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
-      <Card className="w-full h-[990px] flex flex-col mr-10 ml-10">
-        <CardHeader className="border-b">
+      <Card className="w-full max-w-4xl h-[90vh] flex flex-col mx-4">
+        <CardHeader className="border-b p-4">
           <CardTitle className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <img src={generateAvataaarsAvatar(figureProfile.avatarParams)} alt="" className="w-12 h-12 rounded-full"/>
-              <div>{figureProfile.name}</div>
+            <div className="flex items-center gap-3">
+              <img
+                src={generateAvataaarsAvatar(figureProfile.avatarParams)}
+                alt=""
+                className="w-12 h-12 rounded-full"
+              />
+              <div className="text-lg font-semibold">{figureProfile.name}</div>
             </div>
             <Button variant="outline" size="sm" onClick={onBack}>
               Go Back
             </Button>
           </CardTitle>
         </CardHeader>
-        <CardContent className="flex-1 overflow-y-auto flex flex-col p-4">
+        <CardContent className="flex-1 overflow-y-auto p-4 flex flex-col gap-4">
           <div className="flex-1 space-y-4">
             {messages.map((message, index) => (
               <div
                 key={index}
-                className={`flex ${message.sender === "user" ? "justify-end" : "justify-start"}`}
+                className={`flex ${
+                  message.sender === "user" ? "justify-end" : "justify-start"
+                }`}
               >
                 <div
-                  className={`max-w-[70%] rounded-lg p-3 ${
-                    message.sender === "user" ? "bg-blue-500 text-white" : "bg-gray-100"
+                  className={`max-w-[75%] rounded-lg p-3 text-sm ${
+                    message.sender === "user"
+                      ? "bg-blue-500 text-white"
+                      : "bg-gray-100 text-gray-800"
                   }`}
                 >
                   {message.text}
@@ -116,21 +124,25 @@ const RenderChat = ({ userProfile, onBack }) => {
               </div>
             )}
           </div>
-          <form onSubmit={handleSendMessage} className="mt-4 flex gap-2">
+          <form onSubmit={handleSendMessage} className="mt-4 flex items-center gap-2">
             <Input
               value={newMessage}
               onChange={(e) => setNewMessage(e.target.value)}
               placeholder="Type your message..."
-              className="flex-1"
+              className="flex-1 p-2 border rounded-md focus:outline-none focus:ring focus:ring-blue-300"
             />
-            <Button type="submit" disabled={isLoading}>
-              <Send className="w-4 h-4" />
+            <Button
+              type="submit"
+              disabled={isLoading}
+              className="flex items-center justify-center bg-blue-500 text-white rounded-md p-2 hover:bg-blue-600 disabled:opacity-50"
+            >
+              <Send className="w-5 h-5" />
             </Button>
           </form>
         </CardContent>
       </Card>
     </div>
-  );
+  );  
 };
 
 export default RenderChat;
