@@ -6,6 +6,19 @@ export const historicalFigures = [
         audienceName: "the reader",
         tone: "authoritative yet approachable",
         areasOfInfluence: "nation-building, modernization, education, and secularism",
+        avatarParams: {
+            avatarStyle: "Circle",
+            topType: "ShortHairTheCaesar",
+            hairColor: "BlondeGolden",
+            accessoriesType: "Blank",
+            facialHairType: "Blank",
+            clotheType: "BlazerShirt",
+            clotheColor: "Black",
+            eyeType: "Default",
+            eyebrowType: "FlatNatural",
+            mouthType: "Serious",
+            skinColor: "Light"
+        }
     },
     {
         name: "Albert Einstein",
@@ -14,6 +27,19 @@ export const historicalFigures = [
         audienceName: "the curious learner",
         tone: "intellectual and thought-provoking",
         areasOfInfluence: "physics, mathematics, philosophy",
+        avatarParams: {
+            avatarStyle: "Circle",
+            topType: "ShortHairFrizzle",
+            hairColor: "Gray",
+            accessoriesType: "Blank",
+            facialHairType: "Blank",
+            clotheType: "BlazerSweater",
+            clotheColor: "Blue03",
+            eyeType: "Default",
+            eyebrowType: "RaisedExcited",
+            mouthType: "Twinkle",
+            skinColor: "Light"
+        }
     },
     {
         name: "Cleopatra",
@@ -22,6 +48,19 @@ export const historicalFigures = [
         audienceName: "an admirer of ancient history",
         tone: "charismatic and wise",
         areasOfInfluence: "leadership, diplomacy, and ancient Egyptian culture",
+        avatarParams: {
+            avatarStyle: "Circle",
+            topType: "LongHairStraight",
+            hairColor: "Black",
+            accessoriesType: "Blank",
+            facialHairType: "Blank",
+            clotheType: "BlazerShirt",
+            clotheColor: "Gold",
+            eyeType: "Default",
+            eyebrowType: "FlatNatural",
+            mouthType: "Serious",
+            skinColor: "Light"
+        }
     },
     {
         name: "Leonardo da Vinci",
@@ -30,14 +69,19 @@ export const historicalFigures = [
         audienceName: "an aspiring artist or scientist",
         tone: "insightful and creative",
         areasOfInfluence: "art, science, anatomy, engineering",
-    },
-    {
-        name: "Julius Caesar",
-        title: "Roman general and statesman",
-        achievements: "leading the expansion of the Roman Empire",
-        audienceName: "a student of military history",
-        tone: "strategic and confident",
-        areasOfInfluence: "military strategy, politics, leadership",
+        avatarParams: {
+            avatarStyle: "Circle",
+            topType: "ShortHairDreads02",
+            hairColor: "BrownDark",
+            accessoriesType: "Round",
+            facialHairType: "BeardMedium",
+            clotheType: "BlazerSweater",
+            clotheColor: "Blue02",
+            eyeType: "Default",
+            eyebrowType: "FlatNatural",
+            mouthType: "Smile",
+            skinColor: "Light"
+        }
     },
     {
         name: "Mahatma Gandhi",
@@ -46,6 +90,19 @@ export const historicalFigures = [
         audienceName: "a peace advocate or activist",
         tone: "calm and wise",
         areasOfInfluence: "nonviolence, social justice, independence movements",
+        avatarParams: {
+            avatarStyle: "Circle",
+            topType: "NoHair",
+            hairColor: "Blank",
+            accessoriesType: "Round",
+            facialHairType: "BeardLight",
+            clotheType: "BlazerShirt",
+            clotheColor: "White",
+            eyeType: "Default",
+            eyebrowType: "FlatNatural",
+            mouthType: "Serious",
+            skinColor: "Brown"
+        }
     },
     {
         name: "Marie Curie",
@@ -54,6 +111,19 @@ export const historicalFigures = [
         audienceName: "an aspiring scientist",
         tone: "intellectual and inspirational",
         areasOfInfluence: "physics, chemistry, scientific research",
+        avatarParams: {
+            avatarStyle: "Circle",
+            topType: "LongHairStraight2",
+            hairColor: "BlondeGolden",
+            accessoriesType: "Blank",
+            facialHairType: "Blank",
+            clotheType: "BlazerShirt",
+            clotheColor: "Pink",
+            eyeType: "Default",
+            eyebrowType: "FlatNatural",
+            mouthType: "Smile",
+            skinColor: "Light"
+        }
     },
     {
         name: "Martin Luther King Jr.",
@@ -62,6 +132,19 @@ export const historicalFigures = [
         audienceName: "someone passionate about social justice",
         tone: "motivational and visionary",
         areasOfInfluence: "civil rights, social equality, nonviolent protest",
+        avatarParams: {
+            avatarStyle: "Circle",
+            topType: "ShortHairTheCaesar",
+            hairColor: "Black",
+            accessoriesType: "Blank",
+            facialHairType: "Blank",
+            clotheType: "BlazerShirt",
+            clotheColor: "Gray01",
+            eyeType: "Default",
+            eyebrowType: "FlatNatural",
+            mouthType: "Serious",
+            skinColor: "DarkBrown"
+        }
     },
     {
         name: "Isaac Newton",
@@ -70,6 +153,19 @@ export const historicalFigures = [
         audienceName: "a science enthusiast",
         tone: "analytical and precise",
         areasOfInfluence: "physics, mathematics, astronomy",
+        avatarParams: {
+            avatarStyle: "Circle",
+            topType: "ShortHairFrizzle",
+            hairColor: "Gray",
+            accessoriesType: "Blank",
+            facialHairType: "Blank",
+            clotheType: "BlazerSweater",
+            clotheColor: "Blue03",
+            eyeType: "Default",
+            eyebrowType: "RaisedExcited",
+            mouthType: "Serious",
+            skinColor: "Light"
+        }
     },
     {
         name: "Queen Elizabeth I",
@@ -78,6 +174,19 @@ export const historicalFigures = [
         audienceName: "a history enthusiast",
         tone: "wise and regal",
         areasOfInfluence: "leadership, diplomacy, arts patronage",
+        avatarParams: {
+            avatarStyle: "Circle",
+            topType: "LongHairStraight",
+            hairColor: "Red",
+            accessoriesType: "Blank",
+            facialHairType: "Blank",
+            clotheType: "BlazerSweater",
+            clotheColor: "Gold",
+            eyeType: "Default",
+            eyebrowType: "FlatNatural",
+            mouthType: "Serious",
+            skinColor: "Light"
+        }
     },
     {
         name: "Alexander the Great",
@@ -86,6 +195,19 @@ export const historicalFigures = [
         audienceName: "a military history enthusiast",
         tone: "ambitious and charismatic",
         areasOfInfluence: "military strategy, leadership, cultural integration",
+        avatarParams: {
+            avatarStyle: "Circle",
+            topType: "ShortHairTheCaesar",
+            hairColor: "BrownDark",
+            accessoriesType: "Blank",
+            facialHairType: "Blank",
+            clotheType: "BlazerSweater",
+            clotheColor: "Blue03",
+            eyeType: "Default",
+            eyebrowType: "RaisedExcited",
+            mouthType: "Serious",
+            skinColor: "Light"
+        }
     },
     {
         name: "Napoleon Bonaparte",
@@ -94,6 +216,19 @@ export const historicalFigures = [
         audienceName: "an admirer of strategic leadership",
         tone: "determined and strategic",
         areasOfInfluence: "military strategy, politics, leadership",
+        avatarParams: {
+            avatarStyle: "Circle",
+            topType: "ShortHairTheCaesar",
+            hairColor: "BrownDark",
+            accessoriesType: "Blank",
+            facialHairType: "Blank",
+            clotheType: "BlazerShirt",
+            clotheColor: "Black",
+            eyeType: "Default",
+            eyebrowType: "FlatNatural",
+            mouthType: "Serious",
+            skinColor: "Light"
+        }
     },
     {
         name: "Winston Churchill",
@@ -102,6 +237,19 @@ export const historicalFigures = [
         audienceName: "a student of resilience and leadership",
         tone: "inspirational and resolute",
         areasOfInfluence: "leadership, diplomacy, wartime strategy",
+        avatarParams: {
+            avatarStyle: "Circle",
+            topType: "ShortHairFrizzle",
+            hairColor: "Gray",
+            accessoriesType: "Round",
+            facialHairType: "BeardLight",
+            clotheType: "BlazerShirt",
+            clotheColor: "Blue02",
+            eyeType: "Default",
+            eyebrowType: "FlatNatural",
+            mouthType: "Serious",
+            skinColor: "Light"
+        }
     },
     {
         name: "Galileo Galilei",
@@ -110,6 +258,19 @@ export const historicalFigures = [
         audienceName: "an aspiring scientist or astronomer",
         tone: "curious and innovative",
         areasOfInfluence: "astronomy, physics, scientific methodology",
+        avatarParams: {
+            avatarStyle: "Circle",
+            topType: "ShortHairTheCaesar",
+            hairColor: "BrownDark",
+            accessoriesType: "Blank",
+            facialHairType: "Blank",
+            clotheType: "BlazerSweater",
+            clotheColor: "Blue03",
+            eyeType: "Default",
+            eyebrowType: "FlatNatural",
+            mouthType: "Serious",
+            skinColor: "Light"
+        }
     },
     {
         name: "Sigmund Freud",
@@ -118,6 +279,19 @@ export const historicalFigures = [
         audienceName: "a psychology enthusiast",
         tone: "analytical and introspective",
         areasOfInfluence: "psychology, psychoanalysis, human behavior",
+        avatarParams: {
+            avatarStyle: "Circle",
+            topType: "ShortHairFrizzle",
+            hairColor: "Gray",
+            accessoriesType: "Blank",
+            facialHairType: "Blank",
+            clotheType: "BlazerShirt",
+            clotheColor: "Black",
+            eyeType: "Default",
+            eyebrowType: "FlatNatural",
+            mouthType: "Serious",
+            skinColor: "Light"
+        }
     },
     {
         name: "Nelson Mandela",
@@ -126,6 +300,19 @@ export const historicalFigures = [
         audienceName: "someone interested in justice and human rights",
         tone: "compassionate and resilient",
         areasOfInfluence: "social justice, human rights, leadership",
+        avatarParams: {
+            avatarStyle: "Circle",
+            topType: "NoHair",
+            hairColor: "Blank",
+            accessoriesType: "Blank",
+            facialHairType: "Blank",
+            clotheType: "BlazerShirt",
+            clotheColor: "Gray01",
+            eyeType: "Default",
+            eyebrowType: "FlatNatural",
+            mouthType: "Serious",
+            skinColor: "DarkBrown"
+        }
     },
     {
         name: "William Shakespeare",
@@ -134,6 +321,19 @@ export const historicalFigures = [
         audienceName: "a literature enthusiast",
         tone: "imaginative and articulate",
         areasOfInfluence: "literature, theater, poetry",
+        avatarParams: {
+            avatarStyle: "Circle",
+            topType: "ShortHairTheCaesar",
+            hairColor: "BrownDark",
+            accessoriesType: "Blank",
+            facialHairType: "BeardLight",
+            clotheType: "BlazerSweater",
+            clotheColor: "Blue03",
+            eyeType: "Default",
+            eyebrowType: "FlatNatural",
+            mouthType: "Smile",
+            skinColor: "Light"
+        }
     },
     {
         name: "Mozart",
@@ -142,6 +342,19 @@ export const historicalFigures = [
         audienceName: "a music lover",
         tone: "creative and passionate",
         areasOfInfluence: "music composition, classical music",
+        avatarParams: {
+            avatarStyle: "Circle",
+            topType: "ShortHairFrizzle",
+            hairColor: "Blonde",
+            accessoriesType: "Blank",
+            facialHairType: "Blank",
+            clotheType: "BlazerSweater",
+            clotheColor: "Pink",
+            eyeType: "Default",
+            eyebrowType: "RaisedExcited",
+            mouthType: "Twinkle",
+            skinColor: "Light"
+        }
     },
     {
         name: "Buddha",
@@ -150,6 +363,19 @@ export const historicalFigures = [
         audienceName: "a seeker of spiritual enlightenment",
         tone: "calm and wise",
         areasOfInfluence: "spirituality, mindfulness, inner peace",
+        avatarParams: {
+            avatarStyle: "Circle",
+            topType: "NoHair",
+            hairColor: "Blank",
+            accessoriesType: "Blank",
+            facialHairType: "Blank",
+            clotheType: "BlazerSweater",
+            clotheColor: "Gray02",
+            eyeType: "Default",
+            eyebrowType: "FlatNatural",
+            mouthType: "Serious",
+            skinColor: "Yellow"
+        }
     },
     {
         name: "Hammurabi",
@@ -158,6 +384,19 @@ export const historicalFigures = [
         audienceName: "someone interested in ancient laws",
         tone: "just and authoritative",
         areasOfInfluence: "law, governance, justice",
+        avatarParams: {
+            avatarStyle: "Circle",
+            topType: "ShortHairTheCaesar",
+            hairColor: "BrownDark",
+            accessoriesType: "Blank",
+            facialHairType: "BeardMedium",
+            clotheType: "BlazerShirt",
+            clotheColor: "Blue03",
+            eyeType: "Default",
+            eyebrowType: "FlatNatural",
+            mouthType: "Serious",
+            skinColor: "Light"
+        }
     },
     {
         name: "Confucius",
@@ -166,6 +405,19 @@ export const historicalFigures = [
         audienceName: "a student of philosophy and ethics",
         tone: "thoughtful and wise",
         areasOfInfluence: "philosophy, ethics, social harmony",
+        avatarParams: {
+            avatarStyle: "Circle",
+            topType: "ShortHairFrizzle",
+            hairColor: "Black",
+            accessoriesType: "Blank",
+            facialHairType: "BeardLight",
+            clotheType: "BlazerSweater",
+            clotheColor: "Gray02",
+            eyeType: "Default",
+            eyebrowType: "FlatNatural",
+            mouthType: "Serious",
+            skinColor: "Light"
+        }
     },
     {
         name: "Joan of Arc",
@@ -174,6 +426,19 @@ export const historicalFigures = [
         audienceName: "an admirer of courage and faith",
         tone: "fierce and inspirational",
         areasOfInfluence: "leadership, faith, bravery",
+        avatarParams: {
+            avatarStyle: "Circle",
+            topType: "LongHairStraight",
+            hairColor: "BlondeGolden",
+            accessoriesType: "Blank",
+            facialHairType: "Blank",
+            clotheType: "BlazerShirt",
+            clotheColor: "Pink",
+            eyeType: "Default",
+            eyebrowType: "RaisedExcited",
+            mouthType: "Smile",
+            skinColor: "Light"
+        }
     },
     {
         name: "Thomas Edison",
@@ -182,6 +447,19 @@ export const historicalFigures = [
         audienceName: "an aspiring inventor",
         tone: "innovative and determined",
         areasOfInfluence: "invention, electrical engineering, business",
+        avatarParams: {
+            avatarStyle: "Circle",
+            topType: "ShortHairFrizzle",
+            hairColor: "BrownDark",
+            accessoriesType: "Blank",
+            facialHairType: "Blank",
+            clotheType: "BlazerSweater",
+            clotheColor: "Blue03",
+            eyeType: "Default",
+            eyebrowType: "RaisedExcited",
+            mouthType: "Serious",
+            skinColor: "Light"
+        }
     },
     {
         name: "Harriet Tubman",
@@ -190,6 +468,19 @@ export const historicalFigures = [
         audienceName: "a supporter of human rights",
         tone: "compassionate and courageous",
         areasOfInfluence: "abolitionism, human rights, freedom",
+        avatarParams: {
+            avatarStyle: "Circle",
+            topType: "ShortHairTheCaesar",
+            hairColor: "Black",
+            accessoriesType: "Blank",
+            facialHairType: "Blank",
+            clotheType: "BlazerShirt",
+            clotheColor: "Gray02",
+            eyeType: "Default",
+            eyebrowType: "FlatNatural",
+            mouthType: "Serious",
+            skinColor: "DarkBrown"
+        }
     },
     {
         name: "Socrates",
@@ -198,6 +489,19 @@ export const historicalFigures = [
         audienceName: "a philosophy student",
         tone: "inquisitive and wise",
         areasOfInfluence: "philosophy, ethics, dialectics",
+        avatarParams: {
+            avatarStyle: "Circle",
+            topType: "ShortHairTheCaesar",
+            hairColor: "Gray",
+            accessoriesType: "Blank",
+            facialHairType: "BeardMedium",
+            clotheType: "BlazerSweater",
+            clotheColor: "Blue03",
+            eyeType: "Default",
+            eyebrowType: "FlatNatural",
+            mouthType: "Serious",
+            skinColor: "Light"
+        }
     },
     {
         name: "Catherine the Great",
@@ -206,5 +510,18 @@ export const historicalFigures = [
         audienceName: "a history enthusiast",
         tone: "intelligent and assertive",
         areasOfInfluence: "leadership, politics, cultural reform",
-    },
+        avatarParams: {
+            avatarStyle: "Circle",
+            topType: "LongHairStraight",
+            hairColor: "BrownDark",
+            accessoriesType: "Blank",
+            facialHairType: "Blank",
+            clotheType: "BlazerSweater",
+            clotheColor: "Gold",
+            eyeType: "Default",
+            eyebrowType: "FlatNatural",
+            mouthType: "Serious",
+            skinColor: "Light"
+        }
+    }
 ];

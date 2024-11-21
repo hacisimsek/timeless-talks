@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
-import { User, Send, Loader } from "lucide-react";
+import { Send, Loader } from "lucide-react";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { historicalFigures } from "../constants";
 import { franc } from "franc";
@@ -51,8 +51,11 @@ const RenderChat = ({ userProfile, onBack }) => {
     }
   };
 
-  const generateProfilePhoto = (username) => {
-    return `https://api.dicebear.com/5.x/avataaars/svg?seed=${encodeURIComponent(username)}`;
+  const generateAvataaarsAvatar = (options = {}) => {
+    const baseUrl = "https://avataaars.io/";
+    const queryString = Object.entries(options).map(([key, value]) => `${key}=${value}`).join("&");
+    const avatarUrl = `${baseUrl}?${queryString}`;
+    return avatarUrl;
   };
 
   const handleSendMessage = async (e) => {
@@ -81,12 +84,7 @@ const RenderChat = ({ userProfile, onBack }) => {
         <CardHeader className="border-b">
           <CardTitle className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              {/* <img className="w-6 h-6" alt="" s >
-
-              </img> */}
-
-              <img src={generateProfilePhoto(figureProfile.name || "defaultUser")} alt="" className="w-12 h-12 rounded-full"/>
-              
+              <img src={generateAvataaarsAvatar(figureProfile.avatarParams)} alt="" className="w-12 h-12 rounded-full"/>
               <div>{figureProfile.name}</div>
             </div>
             <Button variant="outline" size="sm" onClick={onBack}>
