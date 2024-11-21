@@ -142,7 +142,7 @@ const RenderChat = ({ userProfile, onBack }) => {
         </CardContent>
       </Card>
     </div>
-  );  
+  );   
 };
 
 export default RenderChat;
